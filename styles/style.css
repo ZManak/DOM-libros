@@ -1,0 +1,23 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --terra-cotta: #ed6a5aff;
+    --pale-spring-bud: #f4f1bbff;
+    --opal: #9bc1bcff;
+    --cadet-blue: #5ca4a9ff;
+    --alabaster: #e6ebe0ff;
+}
+
+header{
+    background-color: var(--terra-cotta);
+    color: var(--alabaster);
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+img{
+    width: 10vw;
+}
