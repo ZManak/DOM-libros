@@ -50,13 +50,18 @@ const books = [
         "year": -600
     }]
 
-
-function writeCards() {
-
     const principal = document.createElement("main");
     const seccion = document.createElement("section");
     principal.appendChild(seccion);
 
+    const cuerpo = document.querySelector("body");
+    cuerpo.appendChild(principal);
+
+    const faldon = document.querySelector("footer");
+    document.querySelector("footer").insertBefore(principal, faldon);
+function writeCards() {
+
+    
     for (let i = 0; i < books.length; i++) {
 
         const art = document.createElement("article");
@@ -73,10 +78,11 @@ function writeCards() {
         idioma.innerHTML = "Language: " + books[i].language;
         art.appendChild(idioma);
         let enlace = document.createElement("a");
-        let textoEnlace = document.createTextNode(books[i].link);
+        let textoEnlace = document.createTextNode("Enlace a Wikipedia");
         enlace.appendChild(textoEnlace);
         enlace.title = books[i].link;
         enlace.href = books[i].link;
+        enlace.target = "_blank";
         art.appendChild(enlace);
         let paginas = document.createElement("p");
         paginas.innerHTML = "Pages: " + books[i].pages;
@@ -92,8 +98,7 @@ function writeCards() {
 
     }
 
-    const cuerpo = document.querySelector("body");
-    cuerpo.appendChild(principal);
+    
     //const faldon = document.querySelector("footer");
     //principal.insertBefore(principal, faldon);
 
