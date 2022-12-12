@@ -50,16 +50,11 @@ const books = [
         "year": -600
     }]
 
-    const principal = document.createElement("main");
+    const principal = document.querySelector("main");
     const seccion = document.createElement("section");
     principal.appendChild(seccion);
-
-    const cuerpo = document.querySelector("body");
-    cuerpo.appendChild(principal);
-
-    const faldon = document.querySelector("footer");
-    document.querySelector("footer").insertBefore(principal, faldon);
-function writeCards() {
+    
+    function writeCards() {
 
     
     for (let i = 0; i < books.length; i++) {
